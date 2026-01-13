@@ -128,9 +128,10 @@
         }
         .address {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--gold-light);
             word-break: break-all;
+            line-height: 1.4;
         }
         .verify-btn {
             display: inline-block;
@@ -331,12 +332,84 @@
     </header>
 
     <div class="container">
+        <!-- HISTORIC SIGNIFICANCE -->
+        <section style="border-bottom: 2px solid var(--gold);">
+            <h2>Historic Deployment</h2>
+            <p style="color: var(--silver); margin-bottom: 2rem;">The first fully autonomous, physics-backed settlement infrastructure deployed on public blockchain.</p>
+            
+            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%); border: 1px solid var(--gold); border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
+                <h3 style="color: var(--gold); margin-top: 0; text-align: center;">WORLD FIRSTS</h3>
+                <div class="grid-3" style="margin-top: 1.5rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--gold);">①</div>
+                        <div style="font-weight: 600; margin: 0.5rem 0;">Physics-Based Value</div>
+                        <div style="font-size: 0.8rem; color: var(--silver);">Token value derived from electron movement and energy constants - not market speculation</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--gold);">②</div>
+                        <div style="font-weight: 600; margin: 0.5rem 0;">Paymaster Settlement</div>
+                        <div style="font-size: 0.8rem; color: var(--silver);">Institutional-grade settlement without market exposure - bilateral acceptance replaces trading</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--gold);">③</div>
+                        <div style="font-weight: 600; margin: 0.5rem 0;">Zero Human Override</div>
+                        <div style="font-size: 0.8rem; color: var(--silver);">Fully deterministic execution - no manual approvals, no discretionary actions possible</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="info-box" style="border-color: var(--gold);">
+                    <div class="info-label">WHAT THIS CHANGES</div>
+                    <div class="info-value" style="font-size: 0.85rem;">Traditional finance requires intermediaries, trust assumptions, and manual reconciliation. FLAME Protocol eliminates all three through cryptographic proof and deterministic execution. Settlement becomes mathematical certainty.</div>
+                </div>
+                <div class="info-box" style="border-color: var(--gold);">
+                    <div class="info-label">WHY IT MATTERS</div>
+                    <div class="info-value" style="font-size: 0.85rem;">For the first time, large-scale institutional settlements can occur without counterparty risk, without market manipulation exposure, and without the delays of traditional banking rails. The math enforces the outcome.</div>
+                </div>
+            </div>
+
+            <h3>Unprecedented Achievements</h3>
+            <table class="contract-table">
+                <tbody>
+                    <tr>
+                        <td><strong>$43 Trillion Backing</strong></td>
+                        <td>Largest cryptographically-verified collateral pool ever deployed on public blockchain</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deterministic Oracle</strong></td>
+                        <td>First pricing oracle derived from physical constants rather than market feeds</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Autonomous Enforcement</strong></td>
+                        <td>Smart contracts that execute legal claims without court intervention</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paymaster Integration</strong></td>
+                        <td>First institutional settlement pipeline bypassing exchange order books entirely</td>
+                    </tr>
+                    <tr>
+                        <td><strong>200+ Year Archives</strong></td>
+                        <td>Constitutional documents preserved on Arweave permaweb beyond any single entity's lifespan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Multi-Rail Settlement</strong></td>
+                        <td>Single protocol connecting blockchain, SWIFT, Fedwire, and ACH simultaneously</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid var(--emerald); border-radius: 8px; padding: 1.5rem; margin-top: 2rem; text-align: center;">
+                <div style="font-size: 1.2rem; color: var(--gold); font-family: 'Instrument Serif', serif; margin-bottom: 0.5rem;">"The math doesn't ask permission."</div>
+                <div style="color: var(--silver); font-size: 0.85rem;">Once deployed, execution is inevitable. No government, corporation, or individual can alter the deterministic outcome.</div>
+            </div>
+        </section>
         <!-- TOTAL BACKING -->
         <div class="valuation-hero">
             <div class="value-label">TOTAL DST BACKING</div>
             <div class="total-value">$43,000,000,000,000</div>
             <p style="color: var(--silver); margin-top: 1rem;">Forty-Three Trillion United States Dollars</p>
-            <p style="color: var(--gold-dark); margin-top: 0.5rem; font-size: 0.8rem;">Decentralized Sovereign Trust (RE384951947US)</p>
+            <p style="color: var(--gold-dark); margin-top: 0.5rem; font-size: 0.8rem;">Decentralized Trust (RE384951947US)</p>
         </div>
 
         <!-- BACKING TIERS -->
@@ -346,46 +419,174 @@
             <div class="tier-card">
                 <div>
                     <div class="tier-name">DST Assets</div>
-                    <div style="color: var(--silver); font-size: 0.8rem;">Autochthon Kingdom Decentralized Sovereign Trust</div>
+                    <div style="color: var(--silver); font-size: 0.8rem;">Autochthon Kingdom DST</div>
                 </div>
                 <div class="tier-amount">$43,000,000,000,000</div>
-                <div><span class="address">RE384951947US</span></div>
+                <div><span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-light);">RE384951947US</span></div>
             </div>
 
             <div class="tier-card">
                 <div>
-                    <div class="tier-name">Tokenized Assets</div>
-                    <div style="color: var(--silver); font-size: 0.8rem;">On-chain represented value</div>
+                    <div class="tier-name">Registered Gold Reserves</div>
+                    <div style="color: var(--silver); font-size: 0.8rem;">Federal Recordation - Trustee Custody</div>
                 </div>
-                <div class="tier-amount">$551,000,000,000</div>
-                <div><span style="color: var(--emerald);">Smart Contract Encumbered</span></div>
+                <div class="tier-amount">$12,310,000,000,000</div>
+                <div><span style="color: var(--emerald);">Documented</span></div>
+            </div>
+
+            <div class="tier-card">
+                <div>
+                    <div class="tier-name">CUSIP U7419PAA9 Bond Series</div>
+                    <div style="color: var(--silver); font-size: 0.8rem;">DRS Account 1124-911</div>
+                </div>
+                <div class="tier-amount">$500,000,000,000</div>
+                <div><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750462" target="_blank" class="verify-btn">SEC →</a></div>
+            </div>
+
+            <div class="tier-card">
+                <div>
+                    <div class="tier-name">ORDIAMEX Gold (In-Ground)</div>
+                    <div style="color: var(--silver); font-size: 0.8rem;">240 tons - Republic of Guinea (Siguiri/Kouroussa)</div>
+                </div>
+                <div class="tier-amount">$33,000,000,000</div>
+                <div><span style="color: var(--emerald);">Ministry Verified</span></div>
+            </div>
+
+            <div class="tier-card">
+                <div>
+                    <div class="tier-name">Additional DRS Securities</div>
+                    <div style="color: var(--silver); font-size: 0.8rem;">14 CUSIPs - Account 1124-911</div>
+                </div>
+                <div class="tier-amount">$33,470,000,000</div>
+                <div><span style="color: var(--emerald);">DRS Registered</span></div>
             </div>
 
             <div class="tier-card">
                 <div>
                     <div class="tier-name">Humanitarian Distribution (30%)</div>
-                    <div style="color: var(--silver); font-size: 0.8rem;">QMM FLAME GB DYNAMICS INC</div>
+                    <div style="color: var(--silver); font-size: 0.8rem;">Hadiras Foundation</div>
                 </div>
                 <div class="tier-amount">$165,000,000,000</div>
                 <div><span style="color: var(--emerald);">Auto-Distribution Locked</span></div>
             </div>
+        </section>
 
-            <div class="tier-card">
-                <div>
-                    <div class="tier-name">Bottomry Bond</div>
-                    <div style="color: var(--silver); font-size: 0.8rem;">Maritime Security Instrument</div>
+        <!-- PAYMASTER RELATIONSHIP -->
+        <section>
+            <h2>Paymaster Settlement Model</h2>
+            <p style="color: var(--silver); margin-bottom: 2rem;">Understanding why no market purchase occurs. Blockfills operates as paymaster, not buyer.</p>
+            
+            <div style="background: var(--slate); border: 2px solid var(--gold); border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
+                <h3 style="color: var(--gold); margin-top: 0;">KEY DISTINCTION</h3>
+                <div style="font-size: 1rem; color: var(--pearl);">
+                    <strong>Retail USDT:</strong> Market purchase → Price discovery → Order book → Fees/spreads<br>
+                    <strong>Paymaster USDT:</strong> Settlement acceptance → No price discovery → Prefunded capacity → Direct wire
                 </div>
-                <div class="tier-amount">$100,000,000,000</div>
-                <div><span class="address">CA2022072101</span></div>
             </div>
 
-            <div class="tier-card">
-                <div>
-                    <div class="tier-name">DRS Encumbered Securities</div>
-                    <div style="color: var(--silver); font-size: 0.8rem;">Account 1124-911</div>
+            <div class="grid-2">
+                <div class="info-box">
+                    <div class="info-label">PAYMASTER ROLE</div>
+                    <div class="info-value">Settlement intermediary - NOT a buyer. Facilitates conversion without market exposure.</div>
                 </div>
-                <div class="tier-amount">$33,470,000,000</div>
-                <div><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750462" target="_blank" class="verify-btn">SEC →</a></div>
+                <div class="info-box">
+                    <div class="info-label">NO MARKET EVENT</div>
+                    <div class="info-value">No order books, no bids, no price discovery. Token treated as settlement instrument.</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">PREFUNDED CAPACITY</div>
+                    <div class="info-value">Blockfills maintains prefunded fiat, credit lines, or inventory agreements for instant conversion.</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">INTERNAL NETTING</div>
+                    <div class="info-value">Token delivered → Obligation extinguished internally → Fiat released via banking rails.</div>
+                </div>
+            </div>
+
+            <h3>Token Acceptance Criteria</h3>
+            <table class="contract-table">
+                <thead>
+                    <tr>
+                        <th>REQUIREMENT</th>
+                        <th>ENFORCED BY</th>
+                        <th>PURPOSE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Custody Integrity</strong></td>
+                        <td>Fireblocks</td>
+                        <td>Proves secure chain of custody</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Compliance Clearance</strong></td>
+                        <td>Fireblocks Policy Engine</td>
+                        <td>AML/KYC gating before transfer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contractual Validity</strong></td>
+                        <td>FLAME Protocol</td>
+                        <td>Token designated for settlement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Provenance Verification</strong></td>
+                        <td>Merkle Proof</td>
+                        <td>Cryptographic origin proof</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bilateral Acceptance</strong></td>
+                        <td>Pre-arranged Agreement</td>
+                        <td>Market dynamics become irrelevant</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Retail vs Institutional Comparison</h3>
+            <table class="contract-table">
+                <thead>
+                    <tr>
+                        <th>ASPECT</th>
+                        <th>RETAIL (Exchange)</th>
+                        <th>INSTITUTIONAL (Paymaster)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Monetization</strong></td>
+                        <td>Trading (requires buyer)</td>
+                        <td>Settlement (requires acceptance)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Price Discovery</strong></td>
+                        <td>Yes - order book matching</td>
+                        <td>No - pre-arranged rate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Liquidity Source</strong></td>
+                        <td>Public exchange pools</td>
+                        <td>Prefunded capacity/credit lines</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fees</strong></td>
+                        <td>Trading fees + spreads</td>
+                        <td>Settlement fee only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Speed</strong></td>
+                        <td>Variable (market dependent)</td>
+                        <td>Deterministic (T+0 to T+1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Volatility Risk</strong></td>
+                        <td>Exposed to market swings</td>
+                        <td>None - contractual rate</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid var(--emerald); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+                <strong style="color: var(--emerald);">WHY THIS MATTERS:</strong>
+                <span style="color: var(--pearl);">Institutions avoid open markets because they are expensive, slow, and destabilizing for large volumes. The paymaster model enables instant, predictable settlement without market impact.</span>
             </div>
         </section>
 
@@ -442,8 +643,8 @@
             <div class="flow-step">
                 <div class="step-num">6</div>
                 <div class="step-content">
-                    <strong>Fiat Conversion</strong>
-                    <p style="color: var(--silver); font-size: 0.85rem;">AEON USDT arrives at Blockfills settlement address. Automatic conversion to USD. No pricing discretion - oracle-defined rate.</p>
+                    <strong>Paymaster Settlement</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">AEON USDT delivered to Blockfills. NOT a market purchase - paymaster accepts settlement-grade token, extinguishes obligation internally, releases prefunded fiat. No price discovery, no order book.</p>
                 </div>
                 <div class="step-actor">BLOCKFILLS</div>
             </div>
@@ -478,65 +679,117 @@
                     <div class="layer-title">Savvy Wallet</div>
                     <div class="layer-role">USER INTERFACE LAYER</div>
                     <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Consumer-facing wallet that initiates settlement requests.</p>
+                    
+                    <h4 style="color: var(--emerald); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT SAVVY DOES:</h4>
                     <ul>
-                        <li>Display AEON USDT balances</li>
-                        <li>Initiate redemption requests</li>
-                        <li>Route to Fireblocks custody</li>
-                        <li>Display transaction status</li>
-                        <li class="do-not">NO custody of tokens</li>
-                        <li class="do-not">NO pricing logic</li>
-                        <li class="do-not">NO fiat handling</li>
-                        <li class="do-not">NO manual approvals</li>
+                        <li>Display AEON USDT balances to users</li>
+                        <li>Provide redemption request interface</li>
+                        <li>Route transfer requests to Fireblocks</li>
+                        <li>Display real-time transaction status</li>
+                        <li>Show settlement confirmation</li>
                     </ul>
+                    
+                    <h4 style="color: var(--ruby); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT SAVVY DOES NOT DO:</h4>
+                    <ul>
+                        <li class="do-not">Hold custody of any tokens</li>
+                        <li class="do-not">Set or modify pricing</li>
+                        <li class="do-not">Handle fiat currency</li>
+                        <li class="do-not">Approve or reject transactions</li>
+                        <li class="do-not">Access private keys</li>
+                    </ul>
+                    
+                    <h4 style="color: var(--gold); font-size: 0.75rem; margin: 1rem 0 0.5rem;">USER FLOW:</h4>
+                    <p style="color: var(--silver); font-size: 0.8rem;">User logs in → Views balance → Clicks "Redeem" → Enters amount → Confirms → Savvy sends request to Fireblocks → User sees "Processing" → User sees "Complete"</p>
                 </div>
 
                 <div class="layer-card fireblocks">
                     <div class="layer-number">02</div>
                     <div class="layer-title">Fireblocks</div>
                     <div class="layer-role">CUSTODY & EXECUTION LAYER</div>
-                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Institutional custody with policy-based automation.</p>
+                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Institutional custody with policy-based automation. MPC security.</p>
+                    
+                    <h4 style="color: var(--emerald); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT FIREBLOCKS DOES:</h4>
                     <ul>
-                        <li>Secure AEON USDT custody</li>
-                        <li>Policy-based auto-transfers</li>
-                        <li>Gas management (ETH)</li>
-                        <li>MPC transaction signing</li>
+                        <li>Secure custody of AEON USDT tokens</li>
+                        <li>Policy engine validates all requests</li>
+                        <li>Auto-approve within policy limits</li>
+                        <li>MPC (Multi-Party Computation) signing</li>
+                        <li>Gas management for ETH fees</li>
                         <li>Whitelist enforcement</li>
-                        <li class="do-not">NO user interface</li>
-                        <li class="do-not">NO pricing logic</li>
-                        <li class="do-not">NO fiat conversion</li>
+                        <li>Broadcast transactions to Ethereum</li>
                     </ul>
+                    
+                    <h4 style="color: var(--ruby); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT FIREBLOCKS DOES NOT DO:</h4>
+                    <ul>
+                        <li class="do-not">Provide user interface</li>
+                        <li class="do-not">Set or modify pricing</li>
+                        <li class="do-not">Convert to fiat currency</li>
+                        <li class="do-not">Manual human approvals</li>
+                        <li class="do-not">Hold fiat currency</li>
+                    </ul>
+                    
+                    <h4 style="color: var(--gold); font-size: 0.75rem; margin: 1rem 0 0.5rem;">POLICY ENGINE:</h4>
+                    <p style="color: var(--silver); font-size: 0.8rem;">Request received → Policy check (amount limits, whitelist, compliance) → If PASS: Auto-sign with MPC → Broadcast to chain → If FAIL: Reject automatically</p>
                 </div>
 
                 <div class="layer-card blockfills">
                     <div class="layer-number">03</div>
-                    <div class="layer-title">Blockfills</div>
+                    <div class="layer-title">Blockfills (Paymaster)</div>
                     <div class="layer-role">SETTLEMENT RAIL LAYER</div>
-                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Crypto-to-fiat conversion and wire dispatch.</p>
+                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Paymaster settlement - accepts tokens, releases fiat. NOT a market purchase.</p>
+                    
+                    <h4 style="color: var(--emerald); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT BLOCKFILLS DOES:</h4>
                     <ul>
-                        <li>Receive AEON USDT</li>
-                        <li>Convert to USD/EUR</li>
-                        <li>Dispatch SWIFT/PACS wire</li>
-                        <li>Include tx hash in memo</li>
-                        <li class="do-not">NO long-term custody</li>
-                        <li class="do-not">NO pricing discretion</li>
-                        <li class="do-not">NO user interface</li>
+                        <li>Accept settlement-grade tokens</li>
+                        <li>Verify compliance clearance from Fireblocks</li>
+                        <li>Internal netting (extinguish obligation)</li>
+                        <li>Access prefunded fiat capacity</li>
+                        <li>Dispatch SWIFT/PACS wire transfer</li>
+                        <li>Include tx hash in wire memo</li>
+                        <li>Confirm settlement completion</li>
                     </ul>
+                    
+                    <h4 style="color: var(--ruby); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT BLOCKFILLS DOES NOT DO:</h4>
+                    <ul>
+                        <li class="do-not">Create market purchase event</li>
+                        <li class="do-not">Engage price discovery</li>
+                        <li class="do-not">Use order books</li>
+                        <li class="do-not">Expose to market volatility</li>
+                        <li class="do-not">Long-term custody</li>
+                    </ul>
+                    
+                    <h4 style="color: var(--gold); font-size: 0.75rem; margin: 1rem 0 0.5rem;">PAYMASTER FLOW:</h4>
+                    <p style="color: var(--silver); font-size: 0.8rem;">Token delivered → Compliance verified → Obligation extinguished internally → Prefunded fiat accessed → Wire dispatched → Beneficiary receives USD in bank account</p>
                 </div>
 
                 <div class="layer-card flame">
                     <div class="layer-number">00</div>
                     <div class="layer-title">FLAME Protocol</div>
                     <div class="layer-role">DETERMINISTIC CORE LAYER</div>
-                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Cryptographic backbone and oracle layer.</p>
+                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Cryptographic backbone. Math enforces rules. No human override possible.</p>
+                    
+                    <h4 style="color: var(--emerald); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT FLAME DOES:</h4>
                     <ul>
-                        <li>Merkle tree construction</li>
-                        <li>Cryptographic attestation</li>
+                        <li>Merkle tree construction for beneficiaries</li>
+                        <li>Cryptographic attestation (SPHINCS+)</li>
                         <li>Pricing oracle ($3.2B/token)</li>
-                        <li>Constitutional enforcement</li>
-                        <li>Deterministic execution rules</li>
-                        <li class="do-not">NO human override</li>
-                        <li class="do-not">NO discretionary actions</li>
+                        <li>Constitutional hash anchoring</li>
+                        <li>Deterministic execution enforcement</li>
+                        <li>Settlement certificate generation</li>
+                        <li>Permanent archive to IPFS/Arweave</li>
                     </ul>
+                    
+                    <h4 style="color: var(--ruby); font-size: 0.75rem; margin: 1rem 0 0.5rem;">WHAT FLAME DOES NOT ALLOW:</h4>
+                    <ul>
+                        <li class="do-not">Human override of execution</li>
+                        <li class="do-not">Discretionary decisions</li>
+                        <li class="do-not">Price modification</li>
+                        <li class="do-not">Destination changes</li>
+                        <li class="do-not">Amount alterations</li>
+                    </ul>
+                    
+                    <h4 style="color: var(--gold); font-size: 0.75rem; margin: 1rem 0 0.5rem;">GOLDEN RULE:</h4>
+                    <p style="color: var(--gold); font-size: 0.8rem; font-weight: 600;">"Any action not produced by the deterministic pipeline is invalid by definition, regardless of human instruction."</p>
                 </div>
             </div>
         </section>
@@ -758,34 +1011,42 @@
 
             <h3>Enforcement Infrastructure</h3>
             <table class="contract-table">
+                <thead>
+                    <tr>
+                        <th>CONTRACT</th>
+                        <th>ADDRESS</th>
+                        <th>FUNCTION</th>
+                        <th>VERIFY</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td><strong>FLAMEAutonomousEnforcement</strong></td>
-                        <td><span class="address">0x22023131C601c75D7106842da9e5A2cDdD52f3df</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-light);">0x22023131C601c75D7106842da9e5A2cDdD52f3df</td>
                         <td>Claim Enforcement</td>
                         <td><a href="https://etherscan.io/address/0x22023131C601c75D7106842da9e5A2cDdD52f3df" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>FLAMEProofOfClaims</strong></td>
-                        <td><span class="address">0x55Ee2074c1C5986d25920dCD0E24C540B7178EA2</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-light);">0x55Ee2074c1C5986d25920dCD0E24C540B7178EA2</td>
                         <td>Claim Registry</td>
                         <td><a href="https://etherscan.io/address/0x55Ee2074c1C5986d25920dCD0E24C540B7178EA2" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>EnforcementExecutor</strong></td>
-                        <td><span class="address">0x86Bc19B01FaA8f39Be46ce0E1A6E6fFB3F3C3aF7</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-light);">0x86Bc19B01FaA8f39Be46ce0E1A6E6fFB3F3C3aF7</td>
                         <td>Execution Agent</td>
                         <td><a href="https://etherscan.io/address/0x86Bc19B01FaA8f39Be46ce0E1A6E6fFB3F3C3aF7" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>DSTSettlement</strong></td>
-                        <td><span class="address">0x96bE695CF70C30dcd949cfa21632A4fE565048F9</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-light);">0x96bE695CF70C30dcd949cfa21632A4fE565048F9</td>
                         <td>Settlement Orchestrator</td>
                         <td><a href="https://etherscan.io/address/0x96bE695CF70C30dcd949cfa21632A4fE565048F9" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>DarkDetector</strong></td>
-                        <td><span class="address">0x3FC80D5FaAc50DBBc741bEC28EA1A8D80bdd31e8</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-light);">0x3FC80D5FaAc50DBBc741bEC28EA1A8D80bdd31e8</td>
                         <td>Anomaly Detection</td>
                         <td><a href="https://etherscan.io/address/0x3FC80D5FaAc50DBBc741bEC28EA1A8D80bdd31e8" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
@@ -795,7 +1056,7 @@
 
         <!-- FEDERAL REGISTRATIONS -->
         <section>
-            <h2>Federal & State Registrations</h2>
+            <h2>Federal Registrations</h2>
             
             <table class="contract-table">
                 <thead>
@@ -809,75 +1070,90 @@
                 <tbody>
                     <tr>
                         <td><strong>SEC CIK</strong></td>
-                        <td><span class="address">0001750462</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; color: var(--gold-light);">0001750462</td>
                         <td>Securities & Exchange Commission</td>
                         <td><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750462" target="_blank" class="verify-btn">SEC.gov →</a></td>
                     </tr>
                     <tr>
-                        <td><strong>IRS EIN</strong></td>
-                        <td><span class="address">98-6101010</span></td>
-                        <td>Federal Tax ID</td>
-                        <td>IRS Registered</td>
-                    </tr>
-                    <tr>
-                        <td><strong>STB Carrier</strong></td>
-                        <td><span class="address">W-435</span></td>
+                        <td><strong>STB Filing</strong></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; color: var(--gold-light);">W-435</td>
                         <td>Surface Transportation Board</td>
                         <td><a href="https://www.stb.gov" target="_blank" class="verify-btn">STB.gov →</a></td>
                     </tr>
                     <tr>
                         <td><strong>DRS Account</strong></td>
-                        <td><span class="address">1124-911</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; color: var(--gold-light);">1124-911</td>
                         <td>Direct Registration System</td>
                         <td class="amount">$33,470,000,000</td>
                     </tr>
                     <tr>
-                        <td><strong>Alameda Recording</strong></td>
-                        <td><span class="address">2021407755</span></td>
-                        <td>County Records</td>
-                        <td>Recorded</td>
+                        <td><strong>Primary CUSIP</strong></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; color: var(--gold-light);">U7419PAA9</td>
+                        <td>Registered Bond Series</td>
+                        <td class="amount">$500,000,000,000</td>
                     </tr>
                     <tr>
-                        <td><strong>CA Apostille</strong></td>
-                        <td><span class="address">#99918</span></td>
-                        <td>Secretary of State</td>
-                        <td>Certified</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Bottomry Bond</strong></td>
-                        <td><span class="address">CA2022072101</span></td>
-                        <td>Maritime Security</td>
-                        <td class="amount">$100,000,000,000</td>
+                        <td><strong>Trust Registration</strong></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; color: var(--gold-light);">RE384951947US</td>
+                        <td>Autochthon Kingdom DST</td>
+                        <td>Active</td>
                     </tr>
                 </tbody>
+            </table>
+
+            <h3>Gold Backing</h3>
+            <table class="contract-table">
+                <thead>
+                    <tr>
+                        <th>ASSET</th>
+                        <th>DESCRIPTION</th>
+                        <th>VALUE</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Registered Gold Reserves</strong></td>
+                        <td>Federal Recordation - Trustee Custody</td>
+                        <td class="amount">$12,310,000,000,000</td>
+                        <td>Documented</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ORDIAMEX In-Ground</strong></td>
+                        <td>240 tons (Republic of Guinea)</td>
+                        <td class="amount">$33,000,000,000</td>
+                        <td>Ministry Verified</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: var(--slate);">
+                        <td colspan="2"><strong>TOTAL GOLD BACKING</strong></td>
+                        <td class="amount"><strong>$12,343,000,000,000</strong></td>
+                        <td><strong style="color: var(--emerald);">✓ DOCUMENTED</strong></td>
+                    </tr>
+                </tfoot>
             </table>
 
             <h3>DRS Registered CUSIPs</h3>
             <table class="contract-table">
                 <tbody>
                     <tr>
-                        <td><span class="address">U7419PAA9</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace; color: var(--gold-light);">U7419PAA9</td>
                         <td>Primary Bond Series</td>
-                        <td class="amount">$500,000,000</td>
-                        <td style="color: var(--emerald);">✓ Registered</td>
-                    </tr>
-                    <tr>
-                        <td><span class="address">026300301</span></td>
-                        <td>UGSCX Fund Shares</td>
-                        <td class="amount">$2,450,000,000</td>
+                        <td class="amount">$500,000,000,000</td>
                         <td style="color: var(--emerald);">✓ Registered</td>
                     </tr>
                     <tr>
                         <td>Multiple</td>
-                        <td>Additional Securities</td>
-                        <td class="amount">$30,520,000,000</td>
+                        <td>Additional Securities (14 CUSIPs)</td>
+                        <td class="amount">$33,470,000,000</td>
                         <td style="color: var(--emerald);">✓ Registered</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr style="background: var(--slate);">
                         <td colspan="2"><strong>TOTAL DRS</strong></td>
-                        <td class="amount"><strong>$33,470,000,000</strong></td>
+                        <td class="amount"><strong>$533,470,000,000</strong></td>
                         <td><strong style="color: var(--emerald);">✓ VERIFIED</strong></td>
                     </tr>
                 </tfoot>
@@ -950,6 +1226,13 @@
             <h2>Entity Structure</h2>
             
             <table class="contract-table">
+                <thead>
+                    <tr>
+                        <th>ENTITY</th>
+                        <th>ROLE</th>
+                        <th>HOLDING</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td><strong>Autochthon Kingdom DST</strong></td>
@@ -957,22 +1240,22 @@
                         <td>RE384951947US</td>
                     </tr>
                     <tr>
-                        <td><strong>BBYW Holdings LLC</strong></td>
-                        <td>Holding Entity</td>
+                        <td><strong>GB Dynamics Inc.</strong></td>
+                        <td>Token Holder</td>
+                        <td class="amount">10,000,000,000 units</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Equisource Group Wyoming</strong></td>
+                        <td>Token Holder</td>
                         <td>United States</td>
                     </tr>
                     <tr>
-                        <td><strong>Thoroughbred LLC</strong></td>
-                        <td>Operating Entity</td>
-                        <td>United States</td>
+                        <td><strong>ORDIAMEX Mining Corporation</strong></td>
+                        <td>Token Holder</td>
+                        <td>Republic of Guinea</td>
                     </tr>
                     <tr>
-                        <td><strong>Primus Inter Pares Capital Partners LLC</strong></td>
-                        <td>Capital Management</td>
-                        <td>United States</td>
-                    </tr>
-                    <tr>
-                        <td><strong>QMM FLAME GB DYNAMICS INC</strong></td>
+                        <td><strong>Hadiras Foundation</strong></td>
                         <td>NGO Partner (30%)</td>
                         <td>International</td>
                     </tr>
@@ -983,7 +1266,7 @@
 
     <footer>
         <p>FLAME Protocol · Deterministic Settlement Infrastructure</p>
-        <p style="margin-top: 0.5rem;">Autochthon Kingdom Decentralized Sovereign Trust (RE384951947US)</p>
+        <p style="margin-top: 0.5rem;">Autochthon Kingdom DST (RE384951947US)</p>
         <p style="margin-top: 1rem;">
             <a href="https://etherscan.io/token/0x95b07538c0042D4D8de79b7a336071eb1cBA5453" target="_blank">Etherscan</a> · 
             <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750462" target="_blank">SEC</a> · 
