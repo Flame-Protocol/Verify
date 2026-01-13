@@ -28,7 +28,6 @@
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         
-        /* Header */
         header {
             text-align: center;
             padding: 4rem 2rem;
@@ -65,7 +64,6 @@
             50% { opacity: 0.4; }
         }
 
-        /* Valuation Hero */
         .valuation-hero {
             background: linear-gradient(135deg, var(--slate) 0%, var(--graphite) 100%);
             border: 2px solid var(--gold);
@@ -87,7 +85,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Section */
         section {
             padding: 3rem 0;
             border-bottom: 1px solid var(--graphite);
@@ -101,8 +98,12 @@
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--gold-dark);
         }
+        h3 {
+            color: var(--gold);
+            margin: 2rem 0 1rem;
+            font-size: 1.1rem;
+        }
 
-        /* Contract Table */
         .contract-table {
             width: 100%;
             border-collapse: collapse;
@@ -150,14 +151,7 @@
             color: var(--emerald);
             font-weight: 600;
         }
-        .status-live {
-            color: var(--emerald);
-        }
-        .status-verified {
-            color: var(--sapphire);
-        }
 
-        /* Tier Breakdown */
         .tier-card {
             background: var(--slate);
             border: 1px solid var(--graphite);
@@ -180,30 +174,18 @@
             color: var(--gold);
             text-align: right;
         }
-        .tier-verify {
-            text-align: right;
-        }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem;
-            color: var(--gold-dark);
-            font-size: 0.75rem;
-        }
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        /* Grid */
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1rem;
         }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
 
-        /* Info Box */
         .info-box {
             background: var(--slate);
             border: 1px solid var(--graphite);
@@ -221,6 +203,122 @@
             color: var(--pearl);
             word-break: break-all;
         }
+
+        .layer-card {
+            background: var(--slate);
+            border: 1px solid var(--graphite);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .layer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+        .layer-card.savvy::before { background: var(--emerald); }
+        .layer-card.fireblocks::before { background: var(--sapphire); }
+        .layer-card.blockfills::before { background: var(--gold); }
+        .layer-card.flame::before { background: var(--ruby); }
+        .layer-number {
+            font-size: 2rem;
+            font-family: 'Instrument Serif', serif;
+            color: var(--gold);
+            opacity: 0.3;
+        }
+        .layer-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        .layer-role {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        .layer-card ul {
+            list-style: none;
+        }
+        .layer-card li {
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+            color: var(--silver);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .layer-card li::before {
+            content: '→';
+            color: var(--gold);
+        }
+        .do-not {
+            color: var(--ruby) !important;
+        }
+        .do-not::before {
+            content: '✗' !important;
+            color: var(--ruby) !important;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--graphite);
+        }
+        .flow-step:last-child { border-bottom: none; }
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--obsidian);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-actor {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold-dark);
+            border-radius: 100px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.7rem;
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gold-dark);
+            font-size: 0.75rem;
+        }
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .tier-card {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .tier-amount {
+                text-align: left;
+            }
+            .total-value {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -235,24 +333,23 @@
     <div class="container">
         <!-- TOTAL BACKING -->
         <div class="valuation-hero">
-            <div class="value-label">TOTAL SOVEREIGN TRUST BACKING</div>
+            <div class="value-label">TOTAL DST BACKING</div>
             <div class="total-value">$43,000,000,000,000</div>
             <p style="color: var(--silver); margin-top: 1rem;">Forty-Three Trillion United States Dollars</p>
+            <p style="color: var(--gold-dark); margin-top: 0.5rem; font-size: 0.8rem;">Decentralized Sovereign Trust (RE384951947US)</p>
         </div>
 
         <!-- BACKING TIERS -->
         <section>
-            <h2>Backing Tier Breakdown</h2>
+            <h2>Backing Tier Breakdown (Exact)</h2>
             
             <div class="tier-card">
                 <div>
-                    <div class="tier-name">Sovereign Trust Assets</div>
+                    <div class="tier-name">DST Assets</div>
                     <div style="color: var(--silver); font-size: 0.8rem;">Autochthon Kingdom Decentralized Sovereign Trust</div>
                 </div>
                 <div class="tier-amount">$43,000,000,000,000</div>
-                <div class="tier-verify">
-                    <span class="address">RE384951947US</span>
-                </div>
+                <div><span class="address">RE384951947US</span></div>
             </div>
 
             <div class="tier-card">
@@ -261,9 +358,7 @@
                     <div style="color: var(--silver); font-size: 0.8rem;">On-chain represented value</div>
                 </div>
                 <div class="tier-amount">$551,000,000,000</div>
-                <div class="tier-verify">
-                    <span style="color: var(--emerald);">Smart Contract Encumbered</span>
-                </div>
+                <div><span style="color: var(--emerald);">Smart Contract Encumbered</span></div>
             </div>
 
             <div class="tier-card">
@@ -272,9 +367,7 @@
                     <div style="color: var(--silver); font-size: 0.8rem;">QMM FLAME GB DYNAMICS INC</div>
                 </div>
                 <div class="tier-amount">$165,000,000,000</div>
-                <div class="tier-verify">
-                    <span style="color: var(--emerald);">Auto-Distribution Locked</span>
-                </div>
+                <div><span style="color: var(--emerald);">Auto-Distribution Locked</span></div>
             </div>
 
             <div class="tier-card">
@@ -283,9 +376,7 @@
                     <div style="color: var(--silver); font-size: 0.8rem;">Maritime Security Instrument</div>
                 </div>
                 <div class="tier-amount">$100,000,000,000</div>
-                <div class="tier-verify">
-                    <span class="address">CA2022072101</span>
-                </div>
+                <div><span class="address">CA2022072101</span></div>
             </div>
 
             <div class="tier-card">
@@ -294,15 +385,297 @@
                     <div style="color: var(--silver); font-size: 0.8rem;">Account 1124-911</div>
                 </div>
                 <div class="tier-amount">$33,470,000,000</div>
-                <div class="tier-verify">
-                    <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750462" target="_blank" class="verify-btn">SEC →</a>
+                <div><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750462" target="_blank" class="verify-btn">SEC →</a></div>
+            </div>
+        </section>
+
+        <!-- SETTLEMENT FLOW TRAINING -->
+        <section>
+            <h2>Settlement Pipeline (Step-by-Step Training)</h2>
+            <p style="color: var(--silver); margin-bottom: 2rem;">Complete flow from token to fiat. Each step is automated. No human intervention.</p>
+            
+            <div class="flow-step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <strong>Merkle Tree Construction</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">Beneficiary data processed into deterministic Merkle tree. Each leaf contains recipient address, amount, and claim hash. Root computed using Keccak-256 with domain separation.</p>
                 </div>
+                <div class="step-actor">FLAME</div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <strong>Cryptographic Attestation</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">Settlement batch signed with SPHINCS+ post-quantum signatures. SHA3-512 certificates generated linking Merkle root to verified backing securities.</p>
+                </div>
+                <div class="step-actor">FLAME</div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <strong>Wallet Initiation</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">User-facing wallet displays AEON USDT balance. User clicks redeem. Savvy prepares transfer from redemption vault to Fireblocks.</p>
+                </div>
+                <div class="step-actor">SAVVY</div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <strong>Custody Transfer</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">Fireblocks policy validates request. NO HUMAN APPROVAL - policy auto-approves within limits. Transaction signed via MPC and broadcast to Ethereum mainnet.</p>
+                </div>
+                <div class="step-actor">FIREBLOCKS</div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">5</div>
+                <div class="step-content">
+                    <strong>On-Chain Confirmation</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">Transaction mined in block. Wait for 12 confirmations (~3 minutes). Transfer event logs verified. Transaction hash becomes immutable proof.</p>
+                </div>
+                <div class="step-actor">ETHEREUM</div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">6</div>
+                <div class="step-content">
+                    <strong>Fiat Conversion</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">AEON USDT arrives at Blockfills settlement address. Automatic conversion to USD. No pricing discretion - oracle-defined rate.</p>
+                </div>
+                <div class="step-actor">BLOCKFILLS</div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">7</div>
+                <div class="step-content">
+                    <strong>Wire Dispatch</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">Wire transfer initiated via SWIFT/PACS. Transaction hash included in memo as reference. Beneficiary receives fiat in bank account.</p>
+                </div>
+                <div class="step-actor">BLOCKFILLS</div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">8</div>
+                <div class="step-content">
+                    <strong>Reconciliation</strong>
+                    <p style="color: var(--silver); font-size: 0.85rem;">Settlement reconciled. Audit trail complete: on-chain tx → wire reference → bank credit. Full proof chain preserved.</p>
+                </div>
+                <div class="step-actor">COMPLETE</div>
+            </div>
+        </section>
+
+        <!-- PARTNER LAYER TRAINING -->
+        <section>
+            <h2>Partner Layer Training</h2>
+            <p style="color: var(--silver); margin-bottom: 2rem;">Each partner has specific, non-overlapping responsibilities. Clear boundaries prevent confusion.</p>
+            
+            <div class="grid-2">
+                <div class="layer-card savvy">
+                    <div class="layer-number">01</div>
+                    <div class="layer-title">Savvy Wallet</div>
+                    <div class="layer-role">USER INTERFACE LAYER</div>
+                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Consumer-facing wallet that initiates settlement requests.</p>
+                    <ul>
+                        <li>Display AEON USDT balances</li>
+                        <li>Initiate redemption requests</li>
+                        <li>Route to Fireblocks custody</li>
+                        <li>Display transaction status</li>
+                        <li class="do-not">NO custody of tokens</li>
+                        <li class="do-not">NO pricing logic</li>
+                        <li class="do-not">NO fiat handling</li>
+                        <li class="do-not">NO manual approvals</li>
+                    </ul>
+                </div>
+
+                <div class="layer-card fireblocks">
+                    <div class="layer-number">02</div>
+                    <div class="layer-title">Fireblocks</div>
+                    <div class="layer-role">CUSTODY & EXECUTION LAYER</div>
+                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Institutional custody with policy-based automation.</p>
+                    <ul>
+                        <li>Secure AEON USDT custody</li>
+                        <li>Policy-based auto-transfers</li>
+                        <li>Gas management (ETH)</li>
+                        <li>MPC transaction signing</li>
+                        <li>Whitelist enforcement</li>
+                        <li class="do-not">NO user interface</li>
+                        <li class="do-not">NO pricing logic</li>
+                        <li class="do-not">NO fiat conversion</li>
+                    </ul>
+                </div>
+
+                <div class="layer-card blockfills">
+                    <div class="layer-number">03</div>
+                    <div class="layer-title">Blockfills</div>
+                    <div class="layer-role">SETTLEMENT RAIL LAYER</div>
+                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Crypto-to-fiat conversion and wire dispatch.</p>
+                    <ul>
+                        <li>Receive AEON USDT</li>
+                        <li>Convert to USD/EUR</li>
+                        <li>Dispatch SWIFT/PACS wire</li>
+                        <li>Include tx hash in memo</li>
+                        <li class="do-not">NO long-term custody</li>
+                        <li class="do-not">NO pricing discretion</li>
+                        <li class="do-not">NO user interface</li>
+                    </ul>
+                </div>
+
+                <div class="layer-card flame">
+                    <div class="layer-number">00</div>
+                    <div class="layer-title">FLAME Protocol</div>
+                    <div class="layer-role">DETERMINISTIC CORE LAYER</div>
+                    <p style="color: var(--silver); font-size: 0.85rem; margin-bottom: 1rem;">Cryptographic backbone and oracle layer.</p>
+                    <ul>
+                        <li>Merkle tree construction</li>
+                        <li>Cryptographic attestation</li>
+                        <li>Pricing oracle ($3.2B/token)</li>
+                        <li>Constitutional enforcement</li>
+                        <li>Deterministic execution rules</li>
+                        <li class="do-not">NO human override</li>
+                        <li class="do-not">NO discretionary actions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHYSICS UNIT OF ACCOUNT -->
+        <section>
+            <h2>Physics-Based Unit of Account</h2>
+            <p style="color: var(--silver); margin-bottom: 2rem;">Value derived from immutable laws of physics. No external liquidity required.</p>
+            
+            <div style="background: var(--slate); border: 2px solid var(--gold); border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
+                <h3 style="margin-top: 0;">THE FORMULA</h3>
+                <div style="font-size: 1.2rem; color: var(--pearl); font-family: 'JetBrains Mono', monospace;">
+                    1 TOKEN = 1 eV = 1.602 × 10⁻¹⁹ Joules
+                </div>
+                <div style="color: var(--silver); margin-top: 1rem; font-size: 0.85rem;">
+                    Moving 10²² electrons = 1.602 kilojoules (kJ)<br>
+                    Energy price: $0.10 per kJ = <span style="color: var(--emerald);">$0.1602</span> physical energy cost<br>
+                    Plus securities backing: <span style="color: var(--emerald);">$1.00</span> per token<br>
+                    <strong style="color: var(--gold);">Total intrinsic value: $1.1602 per token</strong>
+                </div>
+            </div>
+            
+            <h3>Physical Constants (Immutable)</h3>
+            <table class="contract-table">
+                <thead>
+                    <tr>
+                        <th>CONSTANT</th>
+                        <th>VALUE</th>
+                        <th>UNIT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Electron Charge</td>
+                        <td><span class="address">1.602176634 × 10⁻¹⁹</span></td>
+                        <td>Coulombs</td>
+                    </tr>
+                    <tr>
+                        <td>Planck Constant</td>
+                        <td><span class="address">6.62607015 × 10⁻³⁴</span></td>
+                        <td>J·s</td>
+                    </tr>
+                    <tr>
+                        <td>Boltzmann Constant</td>
+                        <td><span class="address">1.380649 × 10⁻²³</span></td>
+                        <td>J/K</td>
+                    </tr>
+                    <tr>
+                        <td>Electrons per Token</td>
+                        <td><span class="address">10²² (10,000,000,000,000,000,000,000)</span></td>
+                        <td>electrons</td>
+                    </tr>
+                    <tr>
+                        <td>Energy per Token</td>
+                        <td><span class="address">1.602</span></td>
+                        <td>kilojoules</td>
+                    </tr>
+                    <tr>
+                        <td>Energy Price</td>
+                        <td><span class="address">$0.10</span></td>
+                        <td>USD/kJ</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Value Calculation Per Token</h3>
+            <table class="contract-table">
+                <tbody>
+                    <tr>
+                        <td>Electrons Moved</td>
+                        <td>1 × 10²²</td>
+                        <td class="amount">10,000,000,000,000,000,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>Energy (Joules)</td>
+                        <td>10²² × 1.602×10⁻¹⁹</td>
+                        <td class="amount">1,602 J</td>
+                    </tr>
+                    <tr>
+                        <td>Energy (kJ)</td>
+                        <td>1,602 ÷ 1,000</td>
+                        <td class="amount">1.602 kJ</td>
+                    </tr>
+                    <tr>
+                        <td>Physical Energy Value</td>
+                        <td>1.602 kJ × $0.10</td>
+                        <td class="amount">$0.1602</td>
+                    </tr>
+                    <tr>
+                        <td>Securities Backing</td>
+                        <td>DRS allocation</td>
+                        <td class="amount">$1.0000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: var(--slate);">
+                        <td colspan="2"><strong>TOTAL INTRINSIC VALUE</strong></td>
+                        <td class="amount"><strong>$1.1602</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid var(--emerald); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+                <strong style="color: var(--emerald);">KEY:</strong>
+                <span style="color: var(--pearl);">The energy IS the liquidity. No external capital needed. Settlement happens at the physics layer.</span>
+            </div>
+        </section>
+
+        <!-- PRICING ORACLE -->
+        <section>
+            <h2>Pricing Oracle (On-Chain)</h2>
+            
+            <div class="grid-2">
+                <div class="info-box">
+                    <div class="info-label">ORACLE ADDRESS</div>
+                    <div class="info-value" style="color: var(--gold);">0xd9fC8cD542489F128eD7C7c42e0Eb3a51A3847E8</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">PRICE PER TOKEN</div>
+                    <div class="info-value" style="color: var(--emerald);">$3,200,000,000 (€3.2B)</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">latestAnswer()</div>
+                    <div class="info-value">320000000000000000 (8 decimals)</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">INTERFACE</div>
+                    <div class="info-value">Chainlink-Compatible AggregatorV3</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 1.5rem;">
+                <a href="https://etherscan.io/address/0xd9fC8cD542489F128eD7C7c42e0Eb3a51A3847E8#readContract" target="_blank" class="verify-btn" style="padding: 1rem 2rem;">Read Oracle Contract →</a>
             </div>
         </section>
 
         <!-- DEPLOYED CONTRACTS -->
         <section>
-            <h2>Deployed Smart Contracts (Ethereum Mainnet)</h2>
+            <h2>Deployed Smart Contracts</h2>
             
             <table class="contract-table">
                 <thead>
@@ -323,47 +696,47 @@
                     <tr>
                         <td><strong>ExecutionGateV2</strong></td>
                         <td><span class="address">0xe2311D913F3373b081179F094E378af6D733f551</span></td>
-                        <td>Deterministic Execution Enforcer</td>
+                        <td>Deterministic Execution</td>
                         <td><a href="https://etherscan.io/address/0xe2311D913F3373b081179F094E378af6D733f551" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>Pricing Oracle</strong></td>
                         <td><span class="address">0xd9fC8cD542489F128eD7C7c42e0Eb3a51A3847E8</span></td>
-                        <td>$3.2B/token (Chainlink-compatible)</td>
+                        <td>$3.2B/token rate</td>
                         <td><a href="https://etherscan.io/address/0xd9fC8cD542489F128eD7C7c42e0Eb3a51A3847E8" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>UnitOfAccount V2</strong></td>
                         <td><span class="address">0x25b6B8d6c24F49B25d82049489dEEF19E510FF46</span></td>
-                        <td>Deterministic Valuation Oracle</td>
+                        <td>Valuation Oracle</td>
                         <td><a href="https://etherscan.io/address/0x25b6B8d6c24F49B25d82049489dEEF19E510FF46" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>Settlement Proxy</strong></td>
                         <td><span class="address">0x4524e6e74947D18b883C3Ad553c36551de8A6E9e</span></td>
-                        <td>Permanent Settlement Router</td>
+                        <td>Permanent Router</td>
                         <td><a href="https://etherscan.io/address/0x4524e6e74947D18b883C3Ad553c36551de8A6E9e" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>Fedwire Proxy</strong></td>
                         <td><span class="address">0x7F489F2bD09aadd1488f93A1B67198E4b5d553Ed</span></td>
-                        <td>ISO20022 Wire Router</td>
+                        <td>ISO20022 Router</td>
                         <td><a href="https://etherscan.io/address/0x7F489F2bD09aadd1488f93A1B67198E4b5d553Ed" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>FedwireReemit</strong></td>
                         <td><span class="address">0x906867658136D224f49c75D3FdD7a8BbA4C67047</span></td>
-                        <td>Wire Emission Controller</td>
+                        <td>Wire Controller</td>
                         <td><a href="https://etherscan.io/address/0x906867658136D224f49c75D3FdD7a8BbA4C67047" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>Treasury</strong></td>
                         <td><span class="address">0x8386D21439c67052Af635b8B2410757D8182e76B</span></td>
-                        <td>Primary Token Treasury</td>
+                        <td>Token Treasury</td>
                         <td><a href="https://etherscan.io/address/0x8386D21439c67052Af635b8B2410757D8182e76B" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
-                        <td><strong>Sovereign Controller</strong></td>
+                        <td><strong>DST Controller</strong></td>
                         <td><span class="address">0x90206A9888E3963c22f6AD1c79245b6250CFc016</span></td>
                         <td>Constitutional Authority</td>
                         <td><a href="https://etherscan.io/address/0x90206A9888E3963c22f6AD1c79245b6250CFc016" target="_blank" class="verify-btn">Etherscan →</a></td>
@@ -382,42 +755,30 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
 
-        <!-- ENFORCEMENT CONTRACTS -->
-        <section>
-            <h2>Enforcement Infrastructure</h2>
-            
+            <h3>Enforcement Infrastructure</h3>
             <table class="contract-table">
-                <thead>
-                    <tr>
-                        <th>CONTRACT</th>
-                        <th>ADDRESS</th>
-                        <th>FUNCTION</th>
-                        <th>VERIFY</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
                         <td><strong>FLAMEAutonomousEnforcement</strong></td>
                         <td><span class="address">0x22023131C601c75D7106842da9e5A2cDdD52f3df</span></td>
-                        <td>Autonomous Claim Enforcement</td>
+                        <td>Claim Enforcement</td>
                         <td><a href="https://etherscan.io/address/0x22023131C601c75D7106842da9e5A2cDdD52f3df" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>FLAMEProofOfClaims</strong></td>
                         <td><span class="address">0x55Ee2074c1C5986d25920dCD0E24C540B7178EA2</span></td>
-                        <td>Claim Registration & Proofs</td>
+                        <td>Claim Registry</td>
                         <td><a href="https://etherscan.io/address/0x55Ee2074c1C5986d25920dCD0E24C540B7178EA2" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
                         <td><strong>EnforcementExecutor</strong></td>
                         <td><span class="address">0x86Bc19B01FaA8f39Be46ce0E1A6E6fFB3F3C3aF7</span></td>
-                        <td>Authorized Execution Agent</td>
+                        <td>Execution Agent</td>
                         <td><a href="https://etherscan.io/address/0x86Bc19B01FaA8f39Be46ce0E1A6E6fFB3F3C3aF7" target="_blank" class="verify-btn">Etherscan →</a></td>
                     </tr>
                     <tr>
-                        <td><strong>SovereignSettlement</strong></td>
+                        <td><strong>DSTSettlement</strong></td>
                         <td><span class="address">0x96bE695CF70C30dcd949cfa21632A4fE565048F9</span></td>
                         <td>Settlement Orchestrator</td>
                         <td><a href="https://etherscan.io/address/0x96bE695CF70C30dcd949cfa21632A4fE565048F9" target="_blank" class="verify-btn">Etherscan →</a></td>
@@ -455,8 +816,8 @@
                     <tr>
                         <td><strong>IRS EIN</strong></td>
                         <td><span class="address">98-6101010</span></td>
-                        <td>Federal Tax Identification</td>
-                        <td><span style="color: var(--silver);">IRS Registered</span></td>
+                        <td>Federal Tax ID</td>
+                        <td>IRS Registered</td>
                     </tr>
                     <tr>
                         <td><strong>STB Carrier</strong></td>
@@ -468,68 +829,56 @@
                         <td><strong>DRS Account</strong></td>
                         <td><span class="address">1124-911</span></td>
                         <td>Direct Registration System</td>
-                        <td><span class="amount">$33,470,000,000</span></td>
+                        <td class="amount">$33,470,000,000</td>
                     </tr>
                     <tr>
                         <td><strong>Alameda Recording</strong></td>
                         <td><span class="address">2021407755</span></td>
                         <td>County Records</td>
-                        <td><span style="color: var(--silver);">Recorded</span></td>
+                        <td>Recorded</td>
                     </tr>
                     <tr>
                         <td><strong>CA Apostille</strong></td>
                         <td><span class="address">#99918</span></td>
-                        <td>Secretary of State Authentication</td>
-                        <td><span style="color: var(--silver);">Certified</span></td>
+                        <td>Secretary of State</td>
+                        <td>Certified</td>
                     </tr>
                     <tr>
                         <td><strong>Bottomry Bond</strong></td>
                         <td><span class="address">CA2022072101</span></td>
                         <td>Maritime Security</td>
-                        <td><span class="amount">$100,000,000,000</span></td>
+                        <td class="amount">$100,000,000,000</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
 
-        <!-- DRS CUSIPS -->
-        <section>
-            <h2>DRS Registered CUSIPs (Account 1124-911)</h2>
-            
+            <h3>DRS Registered CUSIPs</h3>
             <table class="contract-table">
-                <thead>
-                    <tr>
-                        <th>CUSIP</th>
-                        <th>DESCRIPTION</th>
-                        <th>VALUE</th>
-                        <th>STATUS</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
                         <td><span class="address">U7419PAA9</span></td>
                         <td>Primary Bond Series</td>
-                        <td><span class="amount">$500,000,000</span></td>
-                        <td><span class="status-live">✓ Registered</span></td>
+                        <td class="amount">$500,000,000</td>
+                        <td style="color: var(--emerald);">✓ Registered</td>
                     </tr>
                     <tr>
                         <td><span class="address">026300301</span></td>
                         <td>UGSCX Fund Shares</td>
-                        <td><span class="amount">$2,450,000,000</span></td>
-                        <td><span class="status-live">✓ Registered</span></td>
+                        <td class="amount">$2,450,000,000</td>
+                        <td style="color: var(--emerald);">✓ Registered</td>
                     </tr>
                     <tr>
-                        <td><span class="address">Multiple</span></td>
-                        <td>Additional Encumbered Securities</td>
-                        <td><span class="amount">$30,520,000,000</span></td>
-                        <td><span class="status-live">✓ Registered</span></td>
+                        <td>Multiple</td>
+                        <td>Additional Securities</td>
+                        <td class="amount">$30,520,000,000</td>
+                        <td style="color: var(--emerald);">✓ Registered</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr style="background: var(--slate);">
-                        <td colspan="2"><strong>TOTAL DRS HOLDINGS</strong></td>
-                        <td><strong class="amount">$33,470,000,000</strong></td>
-                        <td><strong class="status-live">✓ VERIFIED</strong></td>
+                        <td colspan="2"><strong>TOTAL DRS</strong></td>
+                        <td class="amount"><strong>$33,470,000,000</strong></td>
+                        <td><strong style="color: var(--emerald);">✓ VERIFIED</strong></td>
                     </tr>
                 </tfoot>
             </table>
@@ -544,33 +893,28 @@
                     <tr>
                         <th>ARCHIVE</th>
                         <th>IDENTIFIER</th>
-                        <th>CONTENT</th>
-                        <th>ACCESS</th>
+                        <th>VERIFY</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Pinata IPFS Ledger</strong></td>
                         <td><span class="address">bafybeihxwrhta5fmospx4niiwyi6ibelxqx6c2kfv4jleu3ssxzxt4a2v4</span></td>
-                        <td>Complete Transaction Ledger</td>
                         <td><a href="https://gateway.pinata.cloud/ipfs/bafybeihxwrhta5fmospx4niiwyi6ibelxqx6c2kfv4jleu3ssxzxt4a2v4" target="_blank" class="verify-btn">View →</a></td>
                     </tr>
                     <tr>
                         <td><strong>IPFS Evidence</strong></td>
                         <td><span class="address">bafybeibwh3m7beoe52ol47pmp6zfdmjzvyaq4lqax2gfsstnpymh56up3y</span></td>
-                        <td>Constitutional Documents</td>
                         <td><a href="https://ipfs.io/ipfs/bafybeibwh3m7beoe52ol47pmp6zfdmjzvyaq4lqax2gfsstnpymh56up3y" target="_blank" class="verify-btn">View →</a></td>
                     </tr>
                     <tr>
                         <td><strong>Claim to Lien</strong></td>
                         <td><span class="address">bafybeicagn7v4ojm6yxhibfzepfy5wnyzh4vdfm536bv6c5bbpgdvxv6ri</span></td>
-                        <td>Lien Documentation</td>
                         <td><a href="https://ipfs.io/ipfs/bafybeicagn7v4ojm6yxhibfzepfy5wnyzh4vdfm536bv6c5bbpgdvxv6ri" target="_blank" class="verify-btn">View →</a></td>
                     </tr>
                     <tr>
                         <td><strong>ArDrive Archive</strong></td>
                         <td><span class="address">16474e4a-fc49-40cf-823b-0f04a5badc99</span></td>
-                        <td>Permaweb Backup (200+ years)</td>
                         <td><a href="https://arweave.net/16474e4a-fc49-40cf-823b-0f04a5badc99" target="_blank" class="verify-btn">View →</a></td>
                     </tr>
                 </tbody>
@@ -583,12 +927,12 @@
             
             <div class="grid-2">
                 <div class="info-box">
-                    <div class="info-label">UID_FINAL_ROOT (Constitutional Hash)</div>
-                    <div class="info-value" style="color: var(--gold);">0xdb6f41c5b3de2369d7f022bc907c02b9f72b797ba56e972c0917b547e3b8149f</div>
+                    <div class="info-label">UID_FINAL_ROOT</div>
+                    <div class="info-value" style="color: var(--gold); font-size: 0.7rem;">0xdb6f41c5b3de2369d7f022bc907c02b9f72b797ba56e972c0917b547e3b8149f</div>
                 </div>
                 <div class="info-box">
                     <div class="info-label">PORTFOLIO ROOT</div>
-                    <div class="info-value" style="color: var(--gold);">0xf4513db63b078a06c02995af41f3f0b6801aa6c4eda949f9174e01dfada9661c</div>
+                    <div class="info-value" style="color: var(--gold); font-size: 0.7rem;">0xf4513db63b078a06c02995af41f3f0b6801aa6c4eda949f9174e01dfada9661c</div>
                 </div>
                 <div class="info-box">
                     <div class="info-label">DERIVATION</div>
@@ -601,74 +945,15 @@
             </div>
         </section>
 
-        <!-- SYSTEM PARAMETERS -->
-        <section>
-            <h2>System Parameters (Published)</h2>
-            
-            <table class="contract-table">
-                <thead>
-                    <tr>
-                        <th>PARAMETER</th>
-                        <th>VALUE</th>
-                        <th>DESCRIPTION</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>ELECTRON_CHARGE</strong></td>
-                        <td><span class="address">1.602176634e-19</span></td>
-                        <td>Coulombs (SI constant)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>ELECTRONS_PER_TOKEN</strong></td>
-                        <td><span class="address">10000000000000000000000</span></td>
-                        <td>10²² electrons per token</td>
-                    </tr>
-                    <tr>
-                        <td><strong>MILLIJOULES_PER_TOKEN</strong></td>
-                        <td><span class="address">1602000</span></td>
-                        <td>1.602 kJ = 1,602,000 mJ</td>
-                    </tr>
-                    <tr>
-                        <td><strong>USD_PER_KJ</strong></td>
-                        <td><span class="address">0.10</span></td>
-                        <td>$0.10 per kilojoule</td>
-                    </tr>
-                    <tr>
-                        <td><strong>MICRO_USD_PER_KJ</strong></td>
-                        <td><span class="address">100000</span></td>
-                        <td>Scaled for integer math</td>
-                    </tr>
-                    <tr>
-                        <td><strong>TAU_TESTING</strong></td>
-                        <td><span class="address">0</span></td>
-                        <td>Settlement latency (testing)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>TAU_PRODUCTION</strong></td>
-                        <td><span class="address">86400</span></td>
-                        <td>Settlement latency (24 hours)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
         <!-- ENTITY STRUCTURE -->
         <section>
             <h2>Entity Structure</h2>
             
             <table class="contract-table">
-                <thead>
-                    <tr>
-                        <th>ENTITY</th>
-                        <th>ROLE</th>
-                        <th>JURISDICTION</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Autochthon Kingdom Decentralized Sovereign Trust</strong></td>
-                        <td>Primary Trust / Head of State</td>
+                        <td><strong>Autochthon Kingdom DST</strong></td>
+                        <td>Primary Trust</td>
                         <td>RE384951947US</td>
                     </tr>
                     <tr>
@@ -688,193 +973,11 @@
                     </tr>
                     <tr>
                         <td><strong>QMM FLAME GB DYNAMICS INC</strong></td>
-                        <td>NGO Humanitarian Partner</td>
+                        <td>NGO Partner (30%)</td>
                         <td>International</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
-
-        <!-- PHYSICS-BASED UNIT OF ACCOUNT -->
-        <section>
-            <h2>Physics-Based Unit of Account</h2>
-            <p style="color: var(--silver); margin-bottom: 2rem;">Value derived from immutable laws of physics. No external liquidity required.</p>
-            
-            <div style="background: var(--slate); border: 2px solid var(--gold); border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
-                <h3 style="color: var(--gold); margin-bottom: 1rem;">THE FORMULA</h3>
-                <div style="font-size: 1.2rem; color: var(--pearl); font-family: 'JetBrains Mono', monospace;">
-                    1 TOKEN = 1 eV = 1.602 × 10⁻¹⁹ Joules
-                </div>
-                <div style="color: var(--silver); margin-top: 1rem; font-size: 0.85rem;">
-                    Moving 10²² electrons = 1.602 kilojoules (kJ)<br>
-                    Energy price: $0.10 per kJ = <span style="color: var(--emerald);">$0.1602</span> physical energy cost<br>
-                    Plus securities backing: <span style="color: var(--emerald);">$1.00</span> per token<br>
-                    <strong style="color: var(--gold);">Total intrinsic value: $1.1602 per token</strong>
-                </div>
-            </div>
-            
-            <h3 style="color: var(--gold); margin-bottom: 1rem;">Physical Constants (Immutable - Laws of Universe)</h3>
-            <table class="contract-table">
-                <thead>
-                    <tr>
-                        <th>CONSTANT</th>
-                        <th>VALUE</th>
-                        <th>UNIT</th>
-                        <th>SOURCE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Electron Charge</strong></td>
-                        <td><span class="address">1.602176634 × 10⁻¹⁹</span></td>
-                        <td>Coulombs</td>
-                        <td>CODATA 2018</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Planck Constant</strong></td>
-                        <td><span class="address">6.62607015 × 10⁻³⁴</span></td>
-                        <td>J·s</td>
-                        <td>SI Definition</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Boltzmann Constant</strong></td>
-                        <td><span class="address">1.380649 × 10⁻²³</span></td>
-                        <td>J/K</td>
-                        <td>SI Definition</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Electrons per Token</strong></td>
-                        <td><span class="address">10²²</span></td>
-                        <td>electrons</td>
-                        <td>Protocol Definition</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Energy per Token</strong></td>
-                        <td><span class="address">1.602</span></td>
-                        <td>kilojoules (kJ)</td>
-                        <td>Derived: e × 10²²</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Energy Price</strong></td>
-                        <td><span class="address">$0.10</span></td>
-                        <td>USD per kJ</td>
-                        <td>Market Rate</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3 style="color: var(--gold); margin: 2rem 0 1rem;">Value Calculation Per Token</h3>
-            <table class="contract-table">
-                <thead>
-                    <tr>
-                        <th>COMPONENT</th>
-                        <th>CALCULATION</th>
-                        <th>VALUE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Electrons Moved</strong></td>
-                        <td>1 token × 10²² electrons/token</td>
-                        <td><span class="amount">10,000,000,000,000,000,000,000</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Energy (Joules)</strong></td>
-                        <td>10²² × 1.602×10⁻¹⁹</td>
-                        <td><span class="amount">1,602 J</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Energy (kJ)</strong></td>
-                        <td>1,602 J ÷ 1,000</td>
-                        <td><span class="amount">1.602 kJ</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Physical Energy Value</strong></td>
-                        <td>1.602 kJ × $0.10/kJ</td>
-                        <td><span class="amount">$0.1602</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Securities Backing</strong></td>
-                        <td>DRS + Bottomry allocation</td>
-                        <td><span class="amount">$1.0000</span></td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr style="background: var(--slate);">
-                        <td colspan="2"><strong>TOTAL INTRINSIC VALUE PER TOKEN</strong></td>
-                        <td><strong class="amount">$1.1602</strong></td>
-                    </tr>
-                </tfoot>
-            </table>
-            
-            <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid var(--emerald); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
-                <strong style="color: var(--emerald);">KEY INSIGHT:</strong>
-                <span style="color: var(--pearl);">The energy IS the liquidity. No external capital or Uniswap pools required. Settlement happens at the physics layer, not the fiat layer.</span>
-            </div>
-        </section>
-
-        <!-- PRICING ORACLE -->
-        <section>
-            <h2>Pricing Oracle (On-Chain)</h2>
-            
-            <div class="grid-2">
-                <div class="info-box">
-                    <div class="info-label">ORACLE ADDRESS</div>
-                    <div class="info-value" style="color: var(--gold);">0xd9fC8cD542489F128eD7C7c42e0Eb3a51A3847E8</div>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">PRICE PER TOKEN</div>
-                    <div class="info-value" style="color: var(--emerald);">$3,200,000,000 (€3.2B)</div>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">latestAnswer()</div>
-                    <div class="info-value">320000000000000000 (8 decimals)</div>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">INTERFACE</div>
-                    <div class="info-value">Chainlink-Compatible AggregatorV3</div>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">UNIT OF ACCOUNT V2</div>
-                    <div class="info-value" style="color: var(--gold);">0x25b6B8d6c24F49B25d82049489dEEF19E510FF46</div>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">CONNECTED TO</div>
-                    <div class="info-value">Settlement Proxy, Fedwire Proxy</div>
-                </div>
-            </div>
-            
-            <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="https://etherscan.io/address/0xd9fC8cD542489F128eD7C7c42e0Eb3a51A3847E8#readContract" target="_blank" class="verify-btn" style="padding: 1rem 2rem;">Read Oracle Contract →</a>
-                <a href="https://etherscan.io/address/0x25b6B8d6c24F49B25d82049489dEEF19E510FF46#readContract" target="_blank" class="verify-btn" style="padding: 1rem 2rem;">Read UnitOfAccount →</a>
-            </div>
-        </section>
-
-        <!-- PARTNER INTEGRATION -->
-        <section>
-            <h2>Settlement Partners</h2>
-            
-            <div class="grid-2">
-                <div class="info-box">
-                    <div class="info-label">SAVVY WALLET</div>
-                    <div class="info-value">User Interface Layer</div>
-                    <p style="color: var(--silver); font-size: 0.75rem; margin-top: 0.5rem;">Initiates redemptions, displays balances</p>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">FIREBLOCKS</div>
-                    <div class="info-value">Institutional Custody</div>
-                    <p style="color: var(--silver); font-size: 0.75rem; margin-top: 0.5rem;">Policy-based automated transfers</p>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">BLOCKFILLS</div>
-                    <div class="info-value">Fiat Settlement Rail</div>
-                    <p style="color: var(--silver); font-size: 0.75rem; margin-top: 0.5rem;">SWIFT/PACS wire dispatch</p>
-                </div>
-                <div class="info-box">
-                    <div class="info-label">FLOW</div>
-                    <div class="info-value" style="color: var(--gold);">Savvy → Fireblocks → Blockfills → Bank</div>
-                </div>
-            </div>
         </section>
     </div>
 
